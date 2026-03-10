@@ -6,7 +6,7 @@
 > all with built-in guardrails against p-hacking, data fabrication, and
 > irreproducible workflows.
 
-**Version**: 1.2.0 | **License**: MIT | **Author**: [smestern](https://github.com/smestern)
+**Version**: main | **License**: MIT | **Author**: [smestern](https://github.com/smestern)
 
 ## Why SciAgent?
 

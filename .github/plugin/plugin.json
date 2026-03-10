@@ -1,7 +1,7 @@
 {
   "name": "sciagent",
   "description": "A framework for building rigorous, human-in-the-loop scientific coding agents",
-  "version": "1.2.0",
+  "version": "main",
   "author": {
     "name": "smestern"
   },
