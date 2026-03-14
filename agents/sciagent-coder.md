@@ -11,16 +11,12 @@ tools:
   - search
 handoffs:
   - label: "Audit Rigor"
-    agent: sciagent-rigor-reviewer
+    agent: sciagent-reviewer
     prompt: "The implementation above is complete. Audit the code and results for scientific rigor violations."
     send: false
   - label: "Write Report"
     agent: sciagent-report-writer
     prompt: "The implementation is complete and verified. Generate a structured scientific report from the results above."
-    send: false
-  - label: "Review Code"
-    agent: sciagent-code-reviewer
-    prompt: "Review the code written above for correctness, reproducibility, and best practices."
     send: false
 ---
 

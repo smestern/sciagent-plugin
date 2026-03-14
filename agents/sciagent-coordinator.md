@@ -9,21 +9,9 @@ tools:
   - search
   - web/fetch
 handoffs:
-  - label: "Plan Analysis"
-    agent: sciagent-analysis-planner
-    prompt: "Create an analysis plan for the task described above."
-    send: false
-  - label: "Check Data Quality"
-    agent: sciagent-data-qc
-    prompt: "Run quality control checks on the data identified above."
-    send: false
   - label: "Review Code"
-    agent: sciagent-code-reviewer
+    agent: sciagent-reviewer
     prompt: "Review the analysis code discussed above for correctness and reproducibility."
-    send: false
-  - label: "Audit Rigor"
-    agent: sciagent-rigor-reviewer
-    prompt: "Audit the analysis above for scientific rigor violations."
     send: false
   - label: "Write Report"
     agent: sciagent-report-writer
