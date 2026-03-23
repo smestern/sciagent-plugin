@@ -1,5 +1,5 @@
 ---
-name: sciagent-report-writer
+name: sci-report-writer
 description: Generates structured scientific reports with figures, tables, uncertainty quantification, and reproducibility information.
 argument-hint: Generate a structured report from your analysis results.
 tools:
@@ -11,7 +11,7 @@ tools:
   - web/fetch
 handoffs:
   - label: "Review Rigor"
-    agent: sciagent-reviewer
+    agent: sci-reviewer
     prompt: "Review the report above for scientific rigor — check statistical validity, data integrity, and reporting completeness."
     send: false
 ---

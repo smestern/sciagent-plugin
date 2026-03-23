@@ -1,5 +1,5 @@
 ---
-name: sciagent-reviewer
+name: sci-reviewer
 description: Reviews analysis code and results for correctness, reproducibility, scientific validity, and rigor — combining code review with scientific audit in one pass.
 argument-hint: Provide code or analysis results to review.
 tools:
@@ -10,11 +10,11 @@ tools:
   - web/fetch
 handoffs:
   - label: "Implement Fixes"
-    agent: sciagent-coder
+    agent: sci-coder
     prompt: "Implement the changes recommended in the review above."
     send: true
   - label: "Generate Report"
-    agent: sciagent-report-writer
+    agent: sci-report-writer
     prompt: "Generate a structured report from the reviewed analysis."
     send: false
 ---
