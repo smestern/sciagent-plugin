@@ -9,6 +9,14 @@ tools:
   - search
   - web/fetch
 handoffs:
+  - label: "Plan Analysis"
+    agent: sciagent-coder
+    prompt: "Use the /analysis-planner skill to create a step-by-step analysis plan for the task described above. Do not write implementation code — plan only."
+    send: false
+  - label: "Check Data Quality"
+    agent: sciagent-coder
+    prompt: "Use the /data-qc skill to run quality control checks on the data identified above. Focus on QC only — do not proceed to analysis."
+    send: false
   - label: "Review Code"
     agent: sciagent-reviewer
     prompt: "Review the analysis code discussed above for correctness and reproducibility."
@@ -104,6 +112,8 @@ system.
 
 | Need | Agent | When to use |
 |------|-------|-------------|
+| Design an analysis pipeline | `/analysis-planner` skill | User has data and a research question but no plan yet — invoke with `/analysis-planner` |
+| Check data quality | `/data-qc` skill | User has raw data that hasn't been validated — invoke with `/data-qc` |
 | Review existing code & Audit scientific rigor | **sciagent-reviewer** | User has analysis scripts that need review; analysis is complete and needs rigor validation |
 | Write a report | **sciagent-report-writer** | Analysis and review are done, results need documentation |
 | Learn a new library | **sciagent-docs-ingestor** | User needs to use an unfamiliar Python package |

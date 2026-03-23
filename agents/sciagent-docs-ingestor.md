@@ -10,9 +10,15 @@ tools:
   - vscode/askQuestions
   - read
   - search
+  - edit
+  - editFiles
   - web/fetch
   - terminal
 handoffs:
+  - label: "Plan Analysis"
+    agent: sciagent-coder
+    prompt: "Use the /analysis-planner skill to create a step-by-step analysis plan for the task described above. Do not write implementation code — plan only."
+    send: false
 ---
 
 ## Library Documentation Ingestor
