@@ -25,22 +25,47 @@ in a loop isn't just a bug — it's a retracted paper. SciAgent embeds
 
 ## Installation
 
-### From Awesome Copilot Marketplace
+### Copilot CLI (Recommended)
 
-```bash
-copilot plugin marketplace add github/awesome-copilot
-copilot plugin install sciagent@awesome-copilot
+Install directly from GitHub using the
+[Copilot CLI plugin system](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing#installing-plugins):
+
+```sh
+copilot plugin install smestern/sciagent-plugin
+```
+
+Or, in an interactive Copilot session:
+
+```
+/plugin install smestern/sciagent-plugin
+```
+
+### From a Local Clone
+
+If you've already cloned the repo, install from the local path:
+
+```sh
+git clone https://github.com/smestern/sciagent-plugin.git
+copilot plugin install ./sciagent-plugin
 ```
 
 ### Manual (VS Code)
 
-Clone this repo and add to your VS Code settings:
+Alternatively, clone this repo and add to your VS Code settings:
 
 ```jsonc
 // settings.json
 "chat.plugins.paths": {
     "/path/to/sciagent-plugin": true
 }
+```
+
+### Managing the Plugin
+
+```sh
+copilot plugin list                  # View installed plugins
+copilot plugin update sciagent       # Update to latest version
+copilot plugin uninstall sciagent    # Remove completely
 ```
 
 ## Agents
