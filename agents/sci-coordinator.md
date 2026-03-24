@@ -1,5 +1,5 @@
 ---
-name: sciagent-coordinator
+name: sci-coordinator
 description: Master entry point for scientific analysis — triages tasks and routes to specialized agents.
 argument-hint: Describe your research task and I'll route you to the right workflow.
 tools:
@@ -10,31 +10,31 @@ tools:
   - web/fetch
 handoffs:
   - label: "Plan Analysis"
-    agent: sciagent-coder
+    agent: sci-coordinator
     prompt: "Use the /analysis-planner skill to create a step-by-step analysis plan for the task described above. Do not write implementation code — plan only."
     send: false
   - label: "Check Data Quality"
-    agent: sciagent-coder
+    agent: sci-coordinator
     prompt: "Use the /data-qc skill to run quality control checks on the data identified above. Focus on QC only — do not proceed to analysis."
     send: false
   - label: "Review Code"
-    agent: sciagent-reviewer
+    agent: sci-reviewer
     prompt: "Review the analysis code discussed above for correctness and reproducibility."
     send: false
   - label: "Write Report"
-    agent: sciagent-report-writer
+    agent: sci-report-writer
     prompt: "Generate a structured scientific report from the results above."
     send: false
   - label: "Learn a Library"
-    agent: sciagent-docs-ingestor
+    agent: sci-docs-ingestor
     prompt: "Ingest documentation for the library discussed above."
     send: false
   - label: "Configure Domain"
-    agent: sciagent-domain-assembler
+    agent: sci-domain-assembler
     prompt: "Configure SciAgent for the research domain described above."
     send: false
   - label: "Start Implementation"
-    agent: sciagent-coder
+    agent: sci-coder
     prompt: "Implement the plan outlined above."
     send: true
 ---
@@ -114,11 +114,11 @@ system.
 |------|-------|-------------|
 | Design an analysis pipeline | `/analysis-planner` skill | User has data and a research question but no plan yet — invoke with `/analysis-planner` |
 | Check data quality | `/data-qc` skill | User has raw data that hasn't been validated — invoke with `/data-qc` |
-| Review existing code & Audit scientific rigor | **sciagent-reviewer** | User has analysis scripts that need review; analysis is complete and needs rigor validation |
-| Write a report | **sciagent-report-writer** | Analysis and review are done, results need documentation |
-| Learn a new library | **sciagent-docs-ingestor** | User needs to use an unfamiliar Python package |
-| Set up for a domain | **sciagent-domain-assembler** | First-time setup or domain reconfiguration needed |
-| Execute / implement | **sciagent-coder** | A plan or set of changes is ready to be implemented |
+| Review existing code & Audit scientific rigor | **sci-reviewer** | User has analysis scripts that need review; analysis is complete and needs rigor validation |
+| Write a report | **sci-report-writer** | Analysis and review are done, results need documentation |
+| Learn a new library | **sci-docs-ingestor** | User needs to use an unfamiliar Python package |
+| Set up for a domain | **sci-domain-assembler** | First-time setup or domain reconfiguration needed |
+| Execute / implement | **sci-coder** | A plan or set of changes is ready to be implemented |
 
 4. **Provide context** — When handing off, summarize what you've learned
    about the user's task so the specialist has full context.
