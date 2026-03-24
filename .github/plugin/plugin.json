@@ -5,7 +5,7 @@
   "author": {
     "name": "smestern"
   },
-  "repository": "https://github.com/smestern/sciagent-plugin",
+  "repository": "https://github.com/smestern/sciagent",
   "license": "MIT",
   "keywords": [
     "scientific-analysis",
