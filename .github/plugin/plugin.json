@@ -1,7 +1,7 @@
 {
   "name": "sciagent",
   "description": "A framework for building rigorous, human-in-the-loop scientific coding agents",
-  "version": "0.8.0",
+  "version": "1.9.1",
   "author": {
     "name": "smestern"
   },
@@ -17,12 +17,12 @@
     "report-writing"
   ],
   "agents": [
-    "./agents/sci-coder.md",
-    "./agents/sci-coordinator.md",
-    "./agents/sci-docs-ingestor.md",
-    "./agents/sci-domain-assembler.md",
-    "./agents/sci-report-writer.md",
-    "./agents/sci-reviewer.md"
+    "./agents/sciagent-coder.md",
+    "./agents/sciagent-coordinator.md",
+    "./agents/sciagent-docs-ingestor.md",
+    "./agents/sciagent-domain-assembler.md",
+    "./agents/sciagent-report-writer.md",
+    "./agents/sciagent-reviewer.md"
   ],
   "skills": [
     "./skills/analysis-planner",
