@@ -1,7 +1,6 @@
 ---
-name: sciagent-domain-assembler
-description: >-
-  Self-assembly agent that configures SciAgent for your research domain —
+name: sci-domain-assembler
+description: Self-assembly agent that configures SciAgent for your research domain —
   interviews you, discovers relevant packages, and fills in template files.
   Invoke directly or via /configure-domain, /update-domain, and
   /switch-domain skills.
@@ -13,7 +12,7 @@ tools:
   - fetch
 handoffs:
   - label: "Deep-Crawl Library Docs"
-    agent: sciagent-docs-ingestor
+    agent: sci-docs-ingestor
     prompt: "Ingest full API documentation for the domain packages identified during assembly."
     send: false
 ---
