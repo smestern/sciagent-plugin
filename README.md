@@ -6,7 +6,7 @@
 > all with built-in guardrails against p-hacking, data fabrication, and
 > irreproducible workflows.
 
-**Version**: 0.8.0 | **License**: MIT | **Author**: [smestern](https://github.com/smestern)
+**Version**: 2.1.0 | **License**: MIT | **Author**: [smestern](https://github.com/smestern)
 
 ## Why SciAgent?
 
@@ -49,12 +49,12 @@ Clone this repo and add to your VS Code settings:
 
 | Agent | Description |
 |-------|-------------|
-| `@sci-analysis-planner` | Designs step-by-step analysis plans before any code runs |
-| `@sci-coder` | Implements analysis code with built-in rigor enforcement |
-| `@sci-docs-ingestor` | Ingests Python library docs into structured API references |
-| `@sci-domain-assembler` | Configures SciAgent for your specific research domain |
-| `@sci-report-writer` | Generates publication-quality reports with uncertainty quantification |
-| `@sci-reviewer` | Reviews code and results for correctness, reproducibility, and scientific rigor |
+| `@sciagent-analysis-planner` | Designs step-by-step analysis plans before any code runs |
+| `@sciagent-coder` | Implements analysis code with built-in rigor enforcement |
+| `@sciagent-docs-ingestor` | Ingests Python library docs into structured API references |
+| `@sciagent-domain-assembler` | Configures SciAgent for your specific research domain |
+| `@sciagent-report-writer` | Generates publication-quality reports with uncertainty quantification |
+| `@sciagent-reviewer` | Reviews code and results for correctness, reproducibility, and scientific rigor |
 
 ## Skills
 

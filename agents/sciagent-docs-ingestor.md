@@ -1,5 +1,5 @@
 ---
-name: sci-docs-ingestor
+name: sciagent-docs-ingestor
 description: >-
   Ingests documentation for any Python library — crawls PyPI, ReadTheDocs,
   and GitHub to produce a structured API reference. Use when you need to
@@ -16,7 +16,7 @@ tools:
   - terminal
 handoffs:
   - label: "Plan Analysis"
-    agent: sci-analysis-planner
+    agent: sciagent-analysis-planner
     prompt: "Library documentation has been ingested. Plan an analysis using this library and the data available in the workspace."
     send: false
 ---

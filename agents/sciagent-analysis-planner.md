@@ -1,5 +1,5 @@
 ---
-name: sci-analysis-planner
+name: sciagent-analysis-planner
 description: Researches the workspace, designs step-by-step analysis plans through iterative discussion, and routes to specialist agents — the primary entry point for scientific analysis workflows.
 argument-hint: Describe your research task, data, or analysis question.
 tools:
@@ -14,7 +14,7 @@ agents:
   - Explore
 handoffs:
   - label: "Implement Plan"
-    agent: sci-coder
+    agent: sciagent-coder
     prompt: "Implement the analysis plan outlined above, following each step in order."
     send: true
 ---

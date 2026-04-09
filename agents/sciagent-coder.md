@@ -1,5 +1,5 @@
 ---
-name: sci-coder
+name: sciagent-coder
 description: General-purpose coding agent with built-in scientific rigor — implements analysis plans, writes scripts, and executes code while enforcing data integrity, reproducibility, and transparent reporting.
 argument-hint: Implement code, analysis scripts, or any coding task with scientific rigor.
 tools:
@@ -12,11 +12,11 @@ tools:
   - todo
 handoffs:
   - label: "Audit Rigor"
-    agent: sci-reviewer
+    agent: sciagent-reviewer
     prompt: "The implementation above is complete. Audit the code and results for scientific rigor violations."
     send: false
   - label: "Write Report"
-    agent: sci-report-writer
+    agent: sciagent-report-writer
     prompt: "The implementation is complete and verified. Generate a structured scientific report from the results above."
     send: false
 ---
